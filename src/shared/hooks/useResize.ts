@@ -1,9 +1,9 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 enum Breakpoints {
-  MOBILE = 375,
-  TABLET = 800,
-  DESKTOP = 1400,
+  MOBILE = 360,
+  TABLET = 720,
+  DESKTOP = 1280,
 }
 
 export const useResize = () => {
@@ -26,7 +26,7 @@ export const useResize = () => {
   const isTablet = computed(
     () => width.value > Breakpoints.MOBILE && width.value <= Breakpoints.TABLET,
   )
-  const isDesktop = computed(() => width.value > Breakpoints.TABLET)
+  const isDesktop = computed(() => width.value >= Breakpoints.DESKTOP)
 
   return {
     width,

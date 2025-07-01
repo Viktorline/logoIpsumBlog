@@ -1,20 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
+import { routeConfigs, Routes } from '@/shared/constants/routes'
 
 const routes: RouteRecordRaw[] = [
-  {
-    path: '/main',
-    name: 'Main',
-    component: () => import('@/pages/MainPage.vue'),
-  },
-  {
-    path: '/blog',
-    name: 'Blog',
-    component: () => import('@/pages/BlogPage.vue'),
-  },
+  ...routeConfigs.map((config) => ({
+    path: config.path,
+    name: config.name,
+    component: config.component,
+  })),
   {
     path: '/',
-    redirect: '/main',
+    redirect: Routes.MAIN,
   },
 ]
 

@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppFilter from '@/widgets/filter/AppFilter.vue'
+</script>
 
 <template>
   <main class="blog-page">
-    <h1>Блог</h1>
+    <AppFilter />
     <div class="blog-articles-placeholder">
       <p>Статьи</p>
     </div>

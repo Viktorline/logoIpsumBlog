@@ -22,7 +22,7 @@ export const useResize = () => {
     window.removeEventListener('resize', updateWidth)
   })
 
-  const isMobile = computed(() => width.value <= Breakpoints.MOBILE)
+  const isMobile = computed(() => width.value <= Breakpoints.TABLET)
   const isTablet = computed(
     () => width.value > Breakpoints.MOBILE && width.value <= Breakpoints.TABLET,
   )

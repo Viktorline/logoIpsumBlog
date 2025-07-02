@@ -13,7 +13,7 @@ const toggleSidebar = () => {
 
 <template>
   <header
-    class="flex w-full desktop:h-[62px] h-[78px] bg-black sticky top-0 z-50 py-[15px] desktop:px-[56px] px-[22px]"
+    class="flex w-full desktop:h-[62px] h-[78px] bg-black sticky top-0 z-50 py-[15px] desktop:px-14 px-3"
   >
     <div class="flex items-center gap-20 w-full max-w-[1280px]">
       <div class="flex items-center gap-4">

@@ -5,10 +5,10 @@ import { computed } from 'vue'
 import { useResize } from '@/shared/hooks/useResize'
 
 const sidebar = useSidebarStore()
-const { isTablet } = useResize()
+const { isMobile } = useResize()
 
 const isVisible = computed(() => sidebar.isOpen)
-const isFullWidth = computed(() => isTablet.value)
+const isFullWidth = computed(() => isMobile.value)
 
 const handleItemClick = () => {
   sidebar.close()

@@ -4,7 +4,7 @@ import AppArticles from '@/widgets/articles/AppArticles.vue'
 </script>
 
 <template>
-  <main class="blog-page">
+  <main class="blog-page bg-gray-200">
     <AppFilter />
     <AppArticles />
   </main>

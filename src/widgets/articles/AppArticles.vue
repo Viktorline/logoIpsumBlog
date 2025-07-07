@@ -7,7 +7,9 @@ const { articles } = storeToRefs(useArticlesStore())
 </script>
 
 <template>
-  <div>
+  <div
+    class="flex flex-col p-3 desktop:py-4 desktop:px-5 mx-2 my-3 desktop:mx-8 desktop:my-4 bg-white rounded-2xl"
+  >
     <div
       v-if="articles.length > 0"
       class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6"

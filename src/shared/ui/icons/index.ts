@@ -1,31 +1,51 @@
 import { h } from 'vue'
 
 export const IconCheck = () =>
-  h('svg', { width: 18, height: 18, viewBox: '0 0 18 18', fill: 'none' }, [
-    h('path', {
-      d: 'M5 9.5L8 12.5L13 7.5',
-      stroke: 'currentColor',
-      'stroke-width': 1.5,
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
-    }),
-  ])
+  h(
+    'svg',
+    {
+      width: 18,
+      height: 18,
+      viewBox: '0 0 18 18',
+      fill: 'none',
+      xmlns: 'http://www.w3.org/2000/svg',
+    },
+    [
+      h('path', {
+        d: 'M5 9.5L8 12.5L13 7.5',
+        stroke: 'currentColor',
+        'stroke-width': 1.5,
+        'stroke-linecap': 'round',
+        'stroke-linejoin': 'round',
+      }),
+    ],
+  )
 
 export const IconPlus = () =>
-  h('svg', { width: 18, height: 18, viewBox: '0 0 18 18', fill: 'none' }, [
-    h('path', {
-      d: 'M9 4V14',
-      stroke: '#3B82F6',
-      'stroke-width': 1.5,
-      'stroke-linecap': 'round',
-    }),
-    h('path', {
-      d: 'M4 9H14',
-      stroke: '#3B82F6',
-      'stroke-width': 1.5,
-      'stroke-linecap': 'round',
-    }),
-  ])
+  h(
+    'svg',
+    {
+      width: 18,
+      height: 18,
+      viewBox: '0 0 18 18',
+      fill: 'none',
+      xmlns: 'http://www.w3.org/2000/svg',
+    },
+    [
+      h('path', {
+        d: 'M9 4V14',
+        stroke: '#3B82F6',
+        'stroke-width': 1.5,
+        'stroke-linecap': 'round',
+      }),
+      h('path', {
+        d: 'M4 9H14',
+        stroke: '#3B82F6',
+        'stroke-width': 1.5,
+        'stroke-linecap': 'round',
+      }),
+    ],
+  )
 
 export const IconSearch = () =>
   h('svg', { width: 18, height: 18, viewBox: '0 0 18 18', fill: 'none' }, [
@@ -140,6 +160,27 @@ export const IconCalendar = () =>
         stroke: '#B1B5C3',
         'stroke-width': 1.2,
         'stroke-linecap': 'round',
+      }),
+    ],
+  )
+
+export const IconClose = () =>
+  h(
+    'svg',
+    {
+      width: 24,
+      height: 24,
+      fill: 'none',
+      xmlns: 'http://www.w3.org/2000/svg',
+      viewBox: '0 0 24 24',
+    },
+    [
+      h('path', {
+        d: 'M18 6L6 18M6 6l12 12',
+        stroke: 'currentColor',
+        'stroke-width': 2,
+        'stroke-linecap': 'round',
+        'stroke-linejoin': 'round',
       }),
     ],
   )

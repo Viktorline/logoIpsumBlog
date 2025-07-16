@@ -4,7 +4,7 @@ import AppSidebar from './widgets/sidebar/AppSidebar.vue'
 </script>
 
 <template>
-  <main class="app-wrapper min-w-[360px]">
+  <main class="app-wrapper min-w-[345px]">
     <AppHeader />
     <AppSidebar />
     <router-view />

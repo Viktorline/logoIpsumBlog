@@ -1,6 +1,7 @@
 export enum Routes {
   MAIN = '/main',
   BLOG = '/blog',
+  ARTICLE = '/article',
 }
 
 export interface NavigationItem {
@@ -10,7 +11,7 @@ export interface NavigationItem {
 }
 
 export interface RouteConfig {
-  path: Routes
+  path: string
   name: string
   component: () => Promise<any>
 }
@@ -38,5 +39,10 @@ export const routeConfigs: RouteConfig[] = [
     path: Routes.BLOG,
     name: 'Blog',
     component: () => import('@/pages/BlogPage.vue'),
+  },
+  {
+    path: `${Routes.ARTICLE}/:id`,
+    name: 'Article',
+    component: () => import('@/pages/ArticlePage.vue'),
   },
 ]

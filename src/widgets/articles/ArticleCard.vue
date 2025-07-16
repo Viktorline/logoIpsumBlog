@@ -1,15 +1,20 @@
 <script setup lang="ts">
 import type { Article } from '@/shared/stores/articles'
 import { computed } from 'vue'
-import { IconCalendar, IconTime, IconComment, Logo } from '@/shared/ui/icons'
+import { IconCalendar, IconTime, IconComment } from '@/shared/ui/icons'
+import { Routes } from '@/shared/constants/routes'
 
 const props = defineProps<{ article: Article }>()
 
 const mainImage = computed(() => props.article.images[0] || '')
+const articleLink = computed(() => `${Routes.ARTICLE}/${props.article.id}`)
 </script>
 
 <template>
-  <div class="article-card bg-white rounded-2xl shadow-sm p-0 overflow-hidden flex flex-col">
+  <router-link
+    :to="articleLink"
+    class="article-card bg-white rounded-2xl shadow-sm p-0 overflow-hidden flex flex-col transition-all hover:shadow-md hover:-translate-y-1 cursor-pointer"
+  >
     <img v-if="mainImage" :src="mainImage" alt="" class="w-full h-48 object-cover" />
     <div v-else class="w-full h-48 bg-[#F4F6FB] flex items-center justify-center">
       <Logo />
@@ -35,7 +40,7 @@ const mainImage = computed(() => props.article.images[0] || '')
         >
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <style scoped>
@@ -43,6 +48,14 @@ const mainImage = computed(() => props.article.images[0] || '')
   min-width: 0;
   min-height: 340px;
   box-shadow: 0 2px 8px 0 rgba(31, 34, 54, 0.06);
+  text-decoration: none;
+  color: inherit;
+}
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .line-clamp-2 {
   display: -webkit-box;
